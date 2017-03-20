@@ -8,7 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
+env*/
 build/
 develop-eggs/
 dist/
@@ -43,6 +43,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
+cover
 .hypothesis/
 
 # Translations
@@ -76,14 +77,36 @@ target/
 celerybeat-schedule
 
 # dotenv
-.env
+.env*
 
 # virtualenv
-venv/
-ENV/
+venv*/
+.venv*/
+pyenv*/
+.pyenv*/
+pyvenv*/
+.pyvenv*/
+ENV*/
+.ENV*/
+VENV*/
+.VENV*/
+PYENV*/
+.PYENV*/
+PYVENV*/
+.PYVENV*/
 
 # Spyder project settings
 .spyderproject
 
 # Rope project settings
 .ropeproject
+
+# Cruft
+*~*
+.*~*
+*.bak
+.*.bak
+.*.sw*
+._*
+.Trashes
+.DS_Store
