@@ -42,6 +42,42 @@ subjects, since I personally found them to be lacking for beginners.
 [asyncio docs]: <https://docs.python.org/3.4/library/asyncio.html> 'asyncio - Asynchronous I/O, event loop, coroutines and tasks'
 [Python language data model reference]: <https://docs.python.org/3.5/reference/datamodel.html> 'Python language data model reference'
 
+## Locally running the Jupyter notebooks
+
+### Bootstrapping requirements
+
+- ``python3.6``
+- ``virtualenv``
+- ``make`` (setup can be performed manually if ``make`` isn't available)
+
+### Notebook requirements
+
+See ``requirements.txt``.
+
+### Commands
+
+#### Start the server
+
+    make run_jupyter_notebook
+
+This will create a new ``python3.6`` virtualenv in this directory, install the
+latest versions of all the project's PyPI dependencies listed in
+``requirements.txt``, and start the Jupyter notebook server. When the server
+starts, the home page will be opened in the default web browser.
+
+#### Manually start the server
+
+    make && source .pyvenv/bin/activate && python -m jupyter notebook
+
+This does the same thing as ``make run_jupyter_notebook``, but allows you to
+pass custom options to `jupyter`.
+
+#### Clean the repository
+
+    make clean
+
+This will delete everything that hasn't already been committed.
+
 ---------------------------------------
 
 ## Copyright Attributions
