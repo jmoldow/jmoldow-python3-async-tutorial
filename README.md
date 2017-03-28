@@ -44,6 +44,13 @@ subjects, since I personally found them to be lacking for beginners.
 
 ---------------------------------------
 
+## Copyright Attributions
+
+This projects includes code samples from <https://github.com/python/cpython/tree/v3.6.1>.  
+Copyright (c) 2001-2017 Python Software Foundation.  
+All Rights Reserved.  
+License: Python license, <https://www.python.org/3.6/license.html>
+
 ## License
 
 License: [Apache License, Version 2.0][Apache License]  
