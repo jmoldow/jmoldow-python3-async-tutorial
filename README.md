@@ -9,6 +9,26 @@ URL: <https://github.com/jmoldow/jmoldow-python3-async-tutorial>
 
 ## Introduction
 
+Have you ever seen code like:
+
+    # Code sample from <https://github.com/aio-libs/aiohttp/blob/2.0.4/README.rst>
+    # Copyright (c) 2013-2017 Nikolay Kim, Andrew Svetlov, and other aiohttp contributors: <https://github.com/aio-libs/aiohttp/blob/2.0.4/CONTRIBUTORS.txt>.
+    # License: Apache Software License, Version 2.0, <https://github.com/aio-libs/aiohttp/blob/2.0.4/LICENSE.txt>
+    async def fetch(session, url):
+        with aiohttp.Timeout(10, loop=session.loop):
+            async with session.get(url) as response:
+                return await response.text()
+
+and wondered things like:
+- What do these async and await keywords do?
+- What does it look like when this code executes?
+- How does this asynchronous execution work?
+
+Or perhaps you've never seen this style of Python programming before.
+
+If any of these things apply to you, I hope that this tutorial can be
+educational for you.
+
 Python 3.4 introduced, via the proposal in [PEP 3156][], the
 [``asyncio``][asyncio docs] standard library module, a Python standard for
 asynchronous programming and event loops.
@@ -28,13 +48,20 @@ and returns the final result", etc.), they did not help me develop a mental
 model of what these things actually meant, how they worked at runtime, or how
 one would write or run asynchronous code.
 
-One weekend I immersed myself fully in the [CPython source code][] until, after
-two days, I finally emerged with a decent understanding of what was going on
-with those features.
+After many attempts, with the help of reading the [CPython source code][], I've
+finally developed a decent understanding of what is going on with those
+features. Since I personally had trouble learning via the existing
+documentations and conference talk videos, I'm hoping that this tutorial can
+make the topic more accessible to others who might not understand it yet.
 
 This tutorial is meant to cement my own understanding of async programming in
 Python, as well as to augment the existing body of documentation on these
 subjects, since I personally found them to be lacking for beginners.
+
+We'll start from simple generators, moving to `yield from` syntax, and then to
+coroutines. From there we'll show how the language was extended with
+async/await syntax and native coroutines, and then finally we'll look at how
+the asyncio library executes these coroutines via its event loop.
 
 [PEP 3156]: <https://www.python.org/dev/peps/pep-3156/> 'PEP 3156 -- Asynchronous IO Support Rebooted: the "asyncio" Module'
 [PEP 492]: <https://www.python.org/dev/peps/pep-0492/> 'PEP 492 -- Coroutines with async and await syntax'
@@ -86,6 +113,10 @@ This projects includes code samples from <https://github.com/python/cpython/tree
 Copyright (c) 2001-2017 Python Software Foundation.  
 All Rights Reserved.  
 License: Python license, <https://www.python.org/3.6/license.html>
+
+This projects includes code samples from <https://github.com/aio-libs/aiohttp/tree/2.0.4>.  
+Copyright (c) 2013-2017 Nikolay Kim, Andrew Svetlov, and other aiohttp contributors: <https://github.com/aio-libs/aiohttp/blob/2.0.4/CONTRIBUTORS.txt>.  
+License: Apache Software License, Version 2.0, <https://github.com/aio-libs/aiohttp/blob/2.0.4/LICENSE.txt>
 
 ## License
 
