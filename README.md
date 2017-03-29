@@ -20,7 +20,7 @@ Have you ever seen code like:
                 return await response.text()
 
 and wondered things like:
-- What do these async and await keywords do?
+- What do these ``async`` and ``await`` keywords do?
 - What does it look like when this code executes?
 - How does this asynchronous execution work?
 
