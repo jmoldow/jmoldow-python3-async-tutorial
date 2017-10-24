@@ -1,0 +1,5 @@
+https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/
+
+https://github.com/AndreLouisCaron/a-tale-of-event-loops
+
+https://www.youtube.com/watch?v=kdzL3r-yJZY
