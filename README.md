@@ -3,9 +3,21 @@ Tutorial for everything async in Python3: generators, coroutines, async/await sy
 
 Author: [Jordan Moldow][]  
 License: [Apache License, Version 2.0][Apache License]  
-URL: <https://github.com/jmoldow/jmoldow-python3-async-tutorial>
+Git Repo URL: <https://github.com/jmoldow/jmoldow-python3-async-tutorial>  
+Website: <https://jmoldow.github.io/jmoldow-python3-async-tutorial>
 
 ---------------------------------------
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Chapter 1 - Iterators and iterables review](https://github.com/jmoldow/jmoldow-python3-async-tutorial/blob/master/01-iterators-and-iterables-review.ipynb)
+- [Chapter 2 - Generators revisited](https://github.com/jmoldow/jmoldow-python3-async-tutorial/blob/master/02-generators-revisited.ipynb)
+- [Chapter 3 - `yield from` syntax for delegating to subgenerator](https://github.com/jmoldow/jmoldow-python3-async-tutorial/blob/master/03-yield-from-syntax-for-delegating-to-subgenerator.ipynb)
+- [Chapter 4 - Event loops](https://github.com/jmoldow/jmoldow-python3-async-tutorial/blob/master/04-event-loops.ipynb)
+- [Chapter 5 - Event loop futures](https://github.com/jmoldow/jmoldow-python3-async-tutorial/blob/master/05-event-loop-futures.ipynb)
+- [Locally running the Jupyter notebooks](#locally-running-the-jupyter-notebooks)
+- [Copyright Attributions](#copyright-attributions)
+- [License](#license)
 
 ## Introduction
 
@@ -76,6 +88,7 @@ the asyncio library executes these coroutines via its event loop.
 - ``python3.6``
 - ``virtualenv``
 - ``make`` (setup can be performed manually if ``make`` isn't available)
+- ``git clone https://github.com/jmoldow/jmoldow-python3-async-tutorial.git``
 
 ### Notebook requirements
 
